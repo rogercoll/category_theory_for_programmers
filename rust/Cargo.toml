@@ -6,9 +6,12 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+rand = "0.8.5"
 
-[lib]
+[[test]]
 name = "challenge1"
 path = "challenge1.rs"
-doctest = true
-doc = true
+
+[[test]]
+name = "challenge2"
+path = "challenge2.rs"
