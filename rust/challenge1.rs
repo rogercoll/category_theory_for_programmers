@@ -45,18 +45,20 @@ mod tests {
         assert_ne!(
             "Is the world-wide web a category in any sense? Are links mor-
 phisms?",
-            "Is the world-wide web a category in any sense? Are links mor-
-phisms?"
+            "In the sense of web pages, web pages can be objects and morphisms their transaction using links."
         );
         assert_ne!(
             "Is Facebook a category, with people as objects and friendships as
 morphisms?",
-            "Is Facebook a category, with people as objects and friendships as
-morphisms?"
+            "No,  the idea that A -> B (person A is connected to person B) and B -> C (person B is connected to person C) does not automatically imply A -> C (person A is connected to person C)"
         );
         assert_ne!(
             "When is a directed graph a category?",
-            "When is a directed graph a category?"
+            r#"
+1. Identity Morphisms: For each object (node), there must be an identity morphism. This means that there is a loop at each node, representing an arrow that starts and ends at the same node.
+
+2. Composition of Morphisms:  if there is a path from node A to node B and a path from node B to node C, there must be a path from node A to node C.
+"#
         );
     }
 }
